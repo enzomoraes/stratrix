@@ -95,9 +95,7 @@ fn main() {
 ## Strategy Selection
 
 Choose based on your use case:
-- `Naive`: Simple nested loops, good for understanding
-- `NaiveParallel`: Parallelized simple nested loops (requires Send + Sync)
+- `Naive`: Simple nested loops, good for basis analysis
+- `NaiveParallel`: Parallelized simple nested loops
 - `Tiled`: Cache-optimized single-threaded (respects CPU cache lines)
-- `TiledParallel`: Cache-optimized with parallelization (requires Send + Sync)
-
-Parallel strategies require `T: Send + Sync`. For most numeric types (f64, f32, i32), this works automatically.
+- `TiledParallel`: Cache-optimized with parallelization
